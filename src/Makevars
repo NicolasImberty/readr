@@ -3,7 +3,7 @@ PKG_LIBS = -L. -lrcon -L../inst/rcon -Wl,-rpath,'$$ORIGIN/../rcon$(R_ARCH)'
 
 all: $(SHLIB)
 
-$(SHLIB): ../inst/rcon/librcon.so
+$(SHLIB): ../inst/rcon$(R_ARCH)/librcon.so
 
 UNAME:=$(shell uname -s)
 ifeq ($(UNAME), Darwin)
